@@ -33,6 +33,7 @@
         "1-bit_tilemap.tsx"
     ],
     "project": "TileMap.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
         "1-bit_tilemap.tsx",
         "mapFile.tmj"

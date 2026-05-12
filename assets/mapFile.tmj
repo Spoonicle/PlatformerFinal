@@ -58,6 +58,12 @@
          "id":4,
          "name":"Details",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"collision",
+                 "type":"bool",
+                 "value":true
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":90,
@@ -89,6 +95,12 @@
          "id":1,
          "name":"Ground",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"collision",
+                 "type":"bool",
+                 "value":true
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":90,
