@@ -1,0 +1,47 @@
+{
+    "activeFile": "1-bit_tilemap.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "1-bit_tilemap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "mapFile.tmj": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 461,
+                "y": 135.5
+            }
+        },
+        "mapFile.tmj#monochrome_tilemap_transparent_packed": {
+            "scaleInDock": 1
+        }
+    },
+    "last.externalTilesetPath": "C:/Projects/UCSC_CMPM120/PlatformerFinal/PlatformerFinal/assets/ScribblePack/Spritesheet",
+    "last.imagePath": "C:/Projects/UCSC_CMPM120/PlatformerFinal/PlatformerFinal/assets/1-bit_Platformer/Tilemap",
+    "map.lastUsedFormat": "json",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "1-bit_tilemap.tsx"
+    ],
+    "project": "TileMap.tiled-project",
+    "recentFiles": [
+        "1-bit_tilemap.tsx",
+        "mapFile.tmj"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

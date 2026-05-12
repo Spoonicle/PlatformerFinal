@@ -1,0 +1,49 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInEditor": 1
+        },
+        "kenny_tilemap_packed.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "saveFile.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 399.99999999999994,
+                "y": 275.3333333333333
+            }
+        },
+        "saveFile.tmj#kenny_tilemap_packed": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Projects/UCSC_CMPM120/S6/StarterPlatformer/assets",
+    "last.imagePath": "C:/Projects/UCSC_CMPM120/S6/StarterPlatformer/assets",
+    "map.height": 25,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 18,
+    "map.tileWidth": 18,
+    "map.width": 45,
+    "openFiles": [
+    ],
+    "project": "startPlatformerLevel.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "kenny_tilemap_packed.tsx",
+        "saveFile.tmj"
+    ],
+    "tileset.lastUsedExportFilter": "JSON tileset files (*.tsj *.json)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 18,
+        "width": 18
+    }
+}
