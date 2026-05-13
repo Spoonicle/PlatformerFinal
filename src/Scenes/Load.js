@@ -6,42 +6,42 @@ class Load extends Phaser.Scene {
     preload() {
         this.load.setPath("./assets/");
 
-        // Load characters spritesheet
-        this.load.atlas("platformer_characters", "tilemap-characters-packed.png", "tilemap-characters-packed.json");
+        // Load player images from the 1-bit platformer tile set
+        this.load.image("tile_0300", "1-bit_Platformer/Tiles/Default/tile_0300.png");
+        this.load.image("tile_0301", "1-bit_Platformer/Tiles/Default/tile_0301.png");
+        this.load.image("tile_0302", "1-bit_Platformer/Tiles/Default/tile_0302.png");
+        this.load.image("tile_0303", "1-bit_Platformer/Tiles/Default/tile_0303.png");
+        this.load.image("tile_0304", "1-bit_Platformer/Tiles/Default/tile_0304.png");
 
         // Load tilemap information
-        this.load.image("tilemap_tiles", "tilemap_packed.png");                         // Packed tilemap
-        this.load.tilemapTiledJSON("platformer-level-1", "platformer-level-1.tmj");   // Tilemap in JSON
+        this.load.image("tilemap_tiles", "1-bit_Platformer/Tilemap/monochrome_tilemap_packed.png");
+        this.load.tilemapTiledJSON("platformer-level-1", "mapFile.tmj");
     }
 
     create() {
         this.anims.create({
             key: 'walk',
-            frames: this.anims.generateFrameNames('platformer_characters', {
-                prefix: "tile_",
-                start: 0,
-                end: 1,
-                suffix: ".png",
-                zeroPad: 4
-            }),
+            frames: [
+                { key: 'tile_0301' },
+                { key: 'tile_0302' },
+                { key: 'tile_0303' }
+            ],
             frameRate: 15,
             repeat: -1
         });
 
         this.anims.create({
             key: 'idle',
-            defaultTextureKey: "platformer_characters",
             frames: [
-                { frame: "tile_0000.png" }
+                { key: 'tile_0300' }
             ],
             repeat: -1
         });
 
         this.anims.create({
             key: 'jump',
-            defaultTextureKey: "platformer_characters",
             frames: [
-                { frame: "tile_0001.png" }
+                { key: 'tile_0304' }
             ],
         });
 
