@@ -12,33 +12,45 @@ class Platformer extends Phaser.Scene {
     }
 
     create() {
-        // Create a new tilemap game object which uses 16x16 pixel tiles.
-        this.map = this.add.tilemap("platformer-level-1", 16, 16, 90, 20);
+        // Create a new tilemap game object from the loaded Tiled JSON.
+        this.map = this.make.tilemap({ key: "platformer-level-1" });
 
         // Add a tileset to the map
         // First parameter: name used by Tiled in mapFile.tmj
         // Second parameter: key for the tilesheet (from this.load.image in Load.js)
         this.tileset = this.map.addTilesetImage("1-bit_tilemap", "tilemap_tiles");
 
-        // Create a layer
-        this.backgroundLayer = this.map.createLayer("Backdrop", this.tileset, 0, 0);
-        this.backgroundLayer.setScale(2.0);
-        this.groundLayer = this.map.createLayer("Ground-n-Platforms", this.tileset, 0, 0);
-        this.groundLayer.setScale(2.0);
-        this.thingsLayer = this.map.createLayer("Things", this.tileset, 0, 0);
-        this.thingsLayer.setScale(2.0);
+        // Create layers matching the names in mapFile.tmj
+        const createLayerSafe = (name) => {
+            const layer = this.map.createLayer(name, this.tileset, 0, 0);
+            if (!layer) {
+                console.warn(`Tilemap layer not found: ${name}`);
+                return null;
+            }
+            layer.setScale(2.0);
+            return layer;
+        };
+
+        this.backgroundLayer = createLayerSafe("Background");
+        this.detailsLayer = createLayerSafe("Details");
+        this.groundLayer = createLayerSafe("Ground");
+        this.glassLayer = createLayerSafe("Glass");
+        this.playerLayer = createLayerSafe("Player");
 
         // Make it collidable
-        this.groundLayer.setCollisionByProperty({
-            collides: true
-        });
+        if (this.groundLayer) {
+            this.groundLayer.setCollisionBetween(1, 1000);
+        }
 
         // set up player avatar
-        my.sprite.player = this.physics.add.sprite(game.config.width/4, game.config.height/2, "tile_0300").setScale(SCALE)
+        my.sprite.player = this.physics.add.sprite(game.config.width/4, game.config.height/4, "tile_0300").setScale(SCALE)
         my.sprite.player.setCollideWorldBounds(true);
 
         // Enable collision handling
         this.physics.add.collider(my.sprite.player, this.groundLayer);
+
+        // Make camera follow the player
+        this.cameras.main.startFollow(my.sprite.player);
 
         // set up Phaser-provided cursor key input
         cursors = this.input.keyboard.createCursorKeys();

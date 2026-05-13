@@ -1,5 +1,5 @@
 {
-    "activeFile": "1-bit_tilemap.tsx",
+    "activeFile": "mapFile.tmj",
     "expandedProjectPaths": [
         "."
     ],
@@ -13,12 +13,15 @@
             "scaleInEditor": 1
         },
         "mapFile.tmj": {
-            "scale": 1,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 461,
-                "y": 135.5
+                "x": 187,
+                "y": 160.25
             }
+        },
+        "mapFile.tmj#1-bit_tilemap": {
+            "scaleInDock": 1
         },
         "mapFile.tmj#monochrome_tilemap_transparent_packed": {
             "scaleInDock": 1
@@ -30,13 +33,13 @@
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
-        "1-bit_tilemap.tsx"
+        "mapFile.tmj"
     ],
     "project": "TileMap.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "1-bit_tilemap.tsx",
-        "mapFile.tmj"
+        "mapFile.tmj",
+        "1-bit_tilemap.tsx"
     ],
     "tileset.embedInMap": true,
     "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
