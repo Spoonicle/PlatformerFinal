@@ -42,6 +42,13 @@ class Platformer extends Phaser.Scene {
             this.groundLayer.setCollisionBetween(1, 1000);
         }
 
+        // Expand physics world and camera bounds to match the tilemap size (accounting for scale)
+        const mapScale = 2.0;
+        const mapWidth = this.map.widthInPixels * mapScale;
+        const mapHeight = this.map.heightInPixels * mapScale;
+        this.cameras.main.setBounds(0, 0, mapWidth, mapHeight);
+        this.physics.world.setBounds(0, 0, mapWidth, mapHeight);
+
         // set up player avatar
         my.sprite.player = this.physics.add.sprite(game.config.width/4, game.config.height/4, "tile_0300").setScale(SCALE)
         my.sprite.player.setCollideWorldBounds(true);
